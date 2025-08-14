@@ -35,6 +35,21 @@ public class Orfanato {
 
         Edificio edificio = new Edificio(nombreOrfanato, ubicacionOrfanato, numeroNinos);
 
+        //ARREGLO DE OBJETOS
+        Ninios[] listaNinios = new Ninios[numeroNinos];
+        for (int i = 0; i < numeroNinos; i++) {
+            System.out.println("\n--- Datos del niño " + (i + 1) + " ---");
+            System.out.print("Nombre: ");
+            String nombreN = scanner.nextLine();
+            System.out.print("Edad: ");
+            int edadN = scanner.nextInt();
+            scanner.nextLine();
+            System.out.print("Nacionalidad: ");
+            String nacionalidadN = scanner.nextLine();
+
+            listaNinios[i] = new Ninios(nombreN, edadN, nacionalidadN);
+        }
+
         int opcion;
         do {
             System.out.println("\n Menu del orfanato");
@@ -79,3 +94,4 @@ public class Orfanato {
         scanner.close();
     }
 }
+
